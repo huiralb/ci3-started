@@ -1,4 +1,6 @@
 <?php
+
+var_dump($_SERVER['DOCUMENT_ROOT']);
 /**
  * CodeIgniter
  *
@@ -53,7 +55,17 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+switch ($_SERVER['DOCUMENT_ROOT']) {
+	case 'C:\Domains\Horestco\horestco.com\wwwroot':
+		$env = 'production';
+		break;
+	
+	default:
+		$env = 'development';
+		break;
+}
+
+define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $env);
 
 /*
  *---------------------------------------------------------------
@@ -113,7 +125,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = 'application';
+	$application_folder = 'app';
 
 /*
  *---------------------------------------------------------------
