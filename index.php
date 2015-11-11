@@ -54,7 +54,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  */
 switch ($_SERVER['DOCUMENT_ROOT']) {
-	case 'D:/GDRIVE/www.horestco.com':
+	case 'C:/xampp/htdocs':
 		$env = 'development';
 		break;
 	
