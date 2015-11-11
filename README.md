@@ -21,3 +21,9 @@ switch ($_SERVER['DOCUMENT_ROOT']) {
 define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $env);
 ```
 Sesuaikan lokasi project anda, contoh di atas project berada di <code>C:/xampp/htdocs</code>
+
+## Database
+Jika hendak menggunakan illuminate/Database:
+
+1. run <code>$ composer update</code>
+2. tambahkan <code>app/config/autoload.php</code> dengan <code>$autoload['libraries'] = array('MY_Database')</code>

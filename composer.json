@@ -15,9 +15,6 @@
 	},
 	"require": {
 		"php": ">=5.2.4",
-		"illuminate/database": "4.1.30"
-	},
-	"require-dev": {
-		"mikey179/vfsStream": "1.1.*"
+		"illuminate/database": "5.*"
 	}
 }
