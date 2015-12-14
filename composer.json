@@ -14,10 +14,7 @@
 		"source": "https://github.com/bcit-ci/CodeIgniter"
 	},
 	"require": {
-		"php": ">=5.2.4",
-		"illuminate/database": "4.1.30"
-	},
-	"require-dev": {
-		"mikey179/vfsStream": "1.1.*"
+		"php": ">=5.4",
+		"illuminate/database": "5.0"
 	}
 }
