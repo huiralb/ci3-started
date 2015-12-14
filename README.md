@@ -8,7 +8,7 @@ Mulai Codeigniter 3 dengan illuminate/database
 Untuk mengaktifkan debug error secara otomatis edit <code>myProject/index.php</code>
 Jika anda menggunakan xampp kurang lebih seperti ini :
 
-```
+```php
 switch ($_SERVER['DOCUMENT_ROOT']) {
 	case 'C:/xampp/htdocs':
 		$env = 'development';
