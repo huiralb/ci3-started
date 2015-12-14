@@ -9,18 +9,16 @@ Untuk mengaktifkan debug error secara otomatis edit <code>myProject/index.php</c
 Jika anda menggunakan xampp kurang lebih seperti ini :
 
 ```php
-switch ($_SERVER['DOCUMENT_ROOT']) {
-	case 'C:/xampp/htdocs':
-		$env = 'development';
-		break;
-	
-	default:
-		$env = 'production';
-		break;
-}
-define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $env);
+$setting = parse_ini_file("setting.ini.php");
+define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $setting['env']);
 ```
-Sesuaikan lokasi project anda, contoh di atas project berada di <code>C:/xampp/htdocs</code>
+pada <code>setting.ini.php</code>
+```php
+env = development
+```
+Jika anda bekerja pada local komputer masukkan nilai <code>env</code> dengan <code>development</code>
+
+Ganti <code>env</code> menjadi <code>production</code> untuk environment remote / produksi.
 
 ## Database
 Jika hendak menggunakan illuminate/Database:

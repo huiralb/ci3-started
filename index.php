@@ -53,16 +53,9 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-switch ($_SERVER['DOCUMENT_ROOT']) {
-	case 'C:/xampp/htdocs':
-		$env = 'development';
-		break;
-	
-	default:
-		$env = 'production';
-		break;
-}
-define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $env);
+$setting = parse_ini_file("setting.ini.php");
+
+define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $setting['env']);
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
