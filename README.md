@@ -28,7 +28,7 @@ Pastikan setting koneksi database dengan baik pada file <code>setting.ini.php</c
 
 ### Query Builder
 Untuk mengakses model data dari table, code PHP anda kurang lebih terlihat seperti di bawah ini:
-	```php
+```php
 	use Illuminate\Database\Capsule\Manager as DB;
 
 	class Selamat_datang extends CI_Controller {
@@ -42,7 +42,7 @@ Untuk mengakses model data dari table, code PHP anda kurang lebih terlihat seper
 			$this->load->view('welcome_message');
 		}
 	}
-	```
+```
 
 ### ORM Eloquent Database
 * Create file <code>app/Model/User.php</code>
