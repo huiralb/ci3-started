@@ -2,14 +2,14 @@
 Mulai Codeigniter 3 dengan illuminate/database
 
 ## Instalasi
-1. <code>$ git clone https://github.com/huiralb/ci3-started myProject</code>
-2. 
+* <code>$ git clone https://github.com/huiralb/ci3-started myProject</code>
+* Jalankan command line berikut:
 ```
-$ cd myProject
-$ composer install
-$ php -S localhost:8000
+ $ cd myProject
+ $ composer install
+ $ php -S localhost:8000
 ```
-3. Lihat pada browser dengan url <code>localhost:8000</code>
+* Lihat pada browser dengan url <code>localhost:8000</code>
 
 #### Setup environment
 Untuk mengaktifkan debug error secara otomatis pada <code>setting.ini.php</code>
@@ -25,19 +25,19 @@ Sejak anda menjalankan <code>$ composer install</code> pada proses instalasi yan
 
 ####Untuk menggunakan paket ini:
 
-1. Setting koneksi database pada file <code>setting.ini.php</code>
-2. Create file <code>app/Model/User.php</code>
-```php
-<?php
-namespace App\Model;
+* Setting koneksi database pada file <code>setting.ini.php</code>
+* Create file <code>app/Model/User.php</code>
+	```php
+	<?php
+	namespace App\Model;
 
-use Illuminate\Database\Eloquent\Model;
+	use Illuminate\Database\Eloquent\Model;
 
-class User extends Model {
-	
-}
+	class User extends Model {
+
+	}
 ```
-3. akses dari controller
+* akses dari controller
 ```php
 $users = \App\Model\User::all();
 
