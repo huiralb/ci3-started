@@ -21,10 +21,18 @@ Jika anda bekerja pada local komputer masukkan nilai <code>env</code> dengan <co
 Ganti <code>env</code> menjadi <code>production</code> untuk environment remote / produksi.
 
 ## Database Model
-Sejak anda menjalankan <code>$ composer install</code> pada proses instalasi yang lalu, aplikasi anda sudah terinstall paket database Eloquent dengan bantuan composer, secara spesifik ada di folder <code>app/vendor/illuminate/database</code>.
+Jalankan
+```
+$ composer install
+```
+Sejak anda menjalankan <code>$ composer install</code>, aplikasi sudah terinstall paket database Eloquent dengan bantuan composer, secara spesifik ada di folder <code>app/vendor/illuminate/database</code>.
 
 ####Untuk menggunakan paket ini:
-Pastikan setting koneksi database dengan baik pada file <code>setting.ini.php</code>
+1. Pastikan setting koneksi database dengan baik pada file <code>setting.ini.php</code>
+2. Masukkan library di <code>app/config/autoload.php</code>
+```php
+	$autoload['libraries'] = array('MY_Database');
+```
 
 ### Query Builder
 Untuk mengakses model data dari table, code PHP anda kurang lebih terlihat seperti di bawah ini:
